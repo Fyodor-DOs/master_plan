@@ -50,3 +50,24 @@ NIM     : 2241720083
 > Aplikasi menampilkan daftar tugas atau sebuah to-do list yang sama seperti praktikum sebelumnya, namun terdapat tambahan berupa method count untuk mengetahui banyaknya task yang telah diselesaikan atau dicentang.
 
 5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
+## Praktikum 3: Membuat State di Multiple Screens
+![alt text](assets/images/P3.gif)
+
+## Tugas Praktikum 3: State di Multiple Screens
+1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
+2. Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!
+![alt text](assets/images/soal_P3.png)
+
+> Pada class PlanCreatorScreen menunjukkan struktur widget ketika pengguna berada di PlanCreatorScreen. Struktur ini dimulai dengan MaterialApp, diikuti dengan PlanProvider, dan kemudian PlanCreatorScreen. Di dalam PlanCreatorScreen, ada Column yang berisi TextField dan Expanded, yang memiliki ListView. Struktur ini berfungsi untuk membuat dan menampilkan daftar plan yang dibuat oleh pengguna. Lalu pada class PlanScreen ketika pengguna memilih plan, Navigator.push memindahkan pengguna ke halaman baru. Di dalam PlanScreen, struktur Scaffold digunakan untuk membangun UI screen dengan bagian utama ListView untuk menampilkan task di dalam plan dan SafeArea untuk teks. Transisi ini menunjukkan bagaimana state plan dapat dipindahkan di antara screen menggunakan Navigator.push dan bagaimana struktur widget disusun di screen yang berbeda.
+
+3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+![alt text](assets/images/P3.gif)
+
+> Aplikasi menampilkan daftar plan atau rencana yang ketika daftar plan tersebut diklik maka akan diarahkan halaman daftar tugas atau task seperti praktikum sebelumnya. Ketika pengguna mengetuk salah satu rencana di PlanCreatorScreen, aplikasi akan menavigasi ke PlanScreen, menampilkan daftar tugas yang terkait dengan rencana tersebut.
+
+> Alur kerja aplikasi:
+> - Tambah plan: Di PlanCreatorScreen, pengguna memasukkan nama rencana baru di TextField. Setelah menekan tombol "Enter", rencana baru ditambahkan ke dalam daftar menggunakan ValueNotifier<List<Plan>>.
+> - Tampil plan dan task: Di layar PlanScreen, pengguna melihat daftar tugas terkait dengan rencana yang dipilih. Setiap tugas dapat diperbarui statusnya selesai atau belum selesai menggunakan Checkbox.
+
+4. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
