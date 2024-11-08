@@ -27,4 +27,26 @@ NIM     : 2241720083
 > - initState(): Menginisialisasi state saat widget pertama kali dibuat. initState digunakan untuk membuat ScrollController dan menambahkan listener yang akan menutup keyboard ketika pengguna melakukan scroll.
 > - dispose(): Membersihkan resource ketika widget tidak lagi digunakan. dispose akan membuang ScrollController saat widget PlanScreen dihancurkan, sehingga mencegah memory leak.
 
-1. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+6. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
+## Praktikum 2: Mengelola Data Layer dengan InheritedWidget dan InheritedNotifier
+![alt text](assets/images/P2.gif)
+
+## Tugas Praktikum 2: InheritedWidget
+1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.
+2. Jelaskan mana yang dimaksud InheritedWidget pada langkah 1 tersebut! Mengapa yang digunakan InheritedNotifier?
+
+![alt text](assets/images/P2L1.png)
+
+> InheritedWidget adalah widget dasar yang memungkinkan data untuk dibagikan ke widget di bawahnya dalam pohon widget yang sering digunakan untuk berbagi data atau status global. Menggunakan InheritedNotifier karena dapat mendengarkan perubahan yang terjadi pada notifier, perubahan pada objek Plan akan diberitahukan secara otomatis ke seluruh widget yang bergantung padanya, sehingga memperbarui UI sesuai dengan state terbaru.
+
+3. Jelaskan maksud dari method di langkah 3 pada praktikum tersebut! Mengapa dilakukan demikian?
+> - completedCount: Menghitung jumlah task yang statusnya complete yang bernilai true. Method ini diperlukan untuk mengetahui berapa banyak task yang telah selesai dari total task yang ada.
+> - completenessMessage: Menghasilkan string yang menunjukkan progres dalam format "X out of Y tasks," di mana X adalah jumlah task yang selesai, dan Y adalah total task. Method ini diperlukan untuk memberi tahu pengguna tentang status atau progres rencana mereka.
+
+4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
+![alt text](assets/images/P2.gif)
+
+> Aplikasi menampilkan daftar tugas atau sebuah to-do list yang sama seperti praktikum sebelumnya, namun terdapat tambahan berupa method count untuk mengetahui banyaknya task yang telah diselesaikan atau dicentang.
+
+5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
